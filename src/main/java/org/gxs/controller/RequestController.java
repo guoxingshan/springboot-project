@@ -44,6 +44,14 @@ public class RequestController {
     //实体参数
     @RequestMapping("/simpleParam4")
     public String simpleParam4(User user){
+        System.out.println(user.getUserName()+" : "+user.getAge());
+        return "ok";
+    }
+
+    //复杂实体
+    @RequestMapping("/simpleParam5")
+    public String simpleParam5(User user){
+        System.out.println(user.getUserName()+" : "+user.getAge()+" : "+user.getAddress());
         return "ok";
     }
 }
