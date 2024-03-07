@@ -44,7 +44,6 @@ public class RequestController {
     //实体参数
     @RequestMapping("/simpleParam4")
     public String simpleParam4(User user){
-        System.out.println(user.userName+" : "+user.age);
         return "ok";
     }
 }
