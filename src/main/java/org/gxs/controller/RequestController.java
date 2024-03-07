@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 @RestController
 public class RequestController {
@@ -60,14 +60,14 @@ public class RequestController {
 
     //数组参数
     @RequestMapping("/simpleParam6")
-    public String simpleParam6(String [] hobby){
+    public String simpleParam5(String [] hobby){
         System.out.println(Arrays.toString(hobby));
         return "ok";
     }
 
-    //集合参数,默认多个值是封装到数组中的,如果指定集合则要加上@RequestParam
+    //集合参数
     @RequestMapping("/simpleParam7")
-    public String simpleParam6(@RequestParam List<String> hobby){
+    public String simpleParam5(@RequestParam ArrayList <String> hobby){
         System.out.println(hobby);
         return "ok";
     }
